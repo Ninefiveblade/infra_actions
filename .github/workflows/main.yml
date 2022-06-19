@@ -70,7 +70,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull ninefivebde/infra_actions
+          sudo docker pull ninefiveblade/infra_actions
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 ninefivebde/infra_actions
+          sudo docker run --rm -d -p 5000:5000 ninefiveblade/infra_actions
